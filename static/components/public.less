@@ -1,0 +1,23 @@
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0
+}
+
+.bounce-enter-active {
+  animation: bounce-down .5s;
+}
+.bounce-leave-active {
+  animation: bounce-down .3s reverse;
+}
+@keyframes bounce-down {
+  0% {
+    top: 38%;
+    opacity: 0;
+  }
+  100% {
+    top: 40%;
+    opacity: 1;
+  }
+}

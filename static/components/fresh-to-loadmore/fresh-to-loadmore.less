@@ -1,0 +1,87 @@
+.px2px(@name,@px){
+
+    @{name}: round(@px / 2) * 1px;
+
+    [data-dpr="2"] & {
+        @{name}: @px * 1px;
+    }
+    // for mx3
+    [data-dpr="2.5"] & {
+        @{name}: round(@px * 2.5 / 2) * 1px;
+    }
+    // for 小米note
+    [data-dpr="2.75"] & {
+        @{name}: round(@px * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        @{name}: round(@px / 2 * 3) * 1px
+    }
+    // for 三星note4
+    [data-dpr="4"] & {
+        @{name}: @px * 2px;
+    }
+}
+
+.font(@px){
+  .px2px(font-size,@px);
+}
+
+.line-height(@px){
+  .px2px(line-height,@px);
+}
+
+//上拉和下拉刷新
+.top-load-wrapper {
+    line-height: 80px;
+    text-align: center;
+    span{
+        margin-left: 0.15625rem;
+        .font(28);
+    }
+  .icon-arrow {
+    transition: .2s;
+    transform: rotate(180deg);
+  }
+
+  .icon-loading {
+    transform: rotate(0deg);
+    animation-name: loading;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes loading
+  {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+}  
+
+.bottom-load-wrapper {
+    line-height: 80px;
+    text-align: center;
+    span{
+        margin-left: 0.15625rem;
+        .font(28);
+    }
+  .icon-arrow{
+    transition: .2s;
+    transform: rotate(180deg);
+  }
+
+  .icon-loading {
+    transform: rotate(0deg);
+    animation-name: loading;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes loading
+  {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+}
+//上拉和下拉刷新

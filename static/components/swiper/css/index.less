@@ -1,0 +1,44 @@
+@import url("./swiper.css");
+
+.swiper-container {
+    width: 100%;
+    height: 5rem;
+    position: relative;
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        a{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+    .swiper-pagination-bullets{
+    	span{
+        	&.swiper-pagination-bullet{
+	            width:0.234375rem;
+	            height: 0.234375rem;
+	            display: inline-block;
+	            background: #7c5e53;
+	            margin: 0 0.078125rem;
+	        }
+	        &.my-bullet-active{
+    			width:0.234375rem;
+	            height: 0.234375rem;
+	            display: inline-block;
+	            background: #ccc;
+	            opacity: 1;
+	            margin: 0 0.078125rem;
+    		}
+        }
+    }
+
+
+    
+}
